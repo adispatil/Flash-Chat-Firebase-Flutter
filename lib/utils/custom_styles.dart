@@ -17,3 +17,8 @@ const kMessageContainerDecoration = BoxDecoration(
     top: BorderSide(color: Colors.lightBlueAccent, width: 2.0),
   ),
 );
+
+const kLoginScreenButtonStyle = TextStyle(
+fontWeight: FontWeight.w900,
+fontSize: 18.0
+);

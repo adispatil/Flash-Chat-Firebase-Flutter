@@ -1,7 +1,17 @@
+import 'package:flash_chat_firebase/view/chat_screen.dart';
+import 'package:flash_chat_firebase/view/login_screen.dart';
+import 'package:flash_chat_firebase/view/registration_screen.dart';
 import 'package:flash_chat_firebase/view/welcome_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(FlashChat());
+void main() {
+  // add this if you want to remove status bar from android
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
+  runApp(FlashChat());
+}
 
 class FlashChat extends StatelessWidget {
   @override
@@ -12,7 +22,13 @@ class FlashChat extends StatelessWidget {
           bodyText1: TextStyle(color: Colors.black54),
         ),
       ),
-      home: WelcomeScreen(),
+      initialRoute: WelcomeScreen.id,
+      routes: {
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
+        ChatScreen.id: (context) => ChatScreen()
+      },
     );
   }
 }

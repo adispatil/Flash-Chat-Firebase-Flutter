@@ -2,6 +2,9 @@ import 'package:flash_chat_firebase/utils/custom_styles.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatefulWidget {
+
+  static const String id = 'chat screen';
+
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
