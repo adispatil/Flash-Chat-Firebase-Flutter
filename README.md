@@ -1,4 +1,4 @@
-# flash_chat_firebase
+# Flutter Flash Chat using Firebase
 
 A new Flutter application.
 
