@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'color_constants.dart';
+
 const kSendButtonTextStyle = TextStyle(
   color: Colors.lightBlueAccent,
   fontWeight: FontWeight.bold,
@@ -19,6 +21,11 @@ const kMessageContainerDecoration = BoxDecoration(
 );
 
 const kLoginScreenButtonStyle = TextStyle(
-fontWeight: FontWeight.w900,
-fontSize: 18.0
+  fontWeight: FontWeight.w900,
+  fontSize: 18.0,
+);
+
+const kRegularInputTextStyle = TextStyle(
+  color: kColorTextRegular,
+  fontSize: 18.0,
 );

@@ -2,9 +2,9 @@
 import 'package:flash_chat_firebase/utils/custom_styles.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreenButtons extends StatelessWidget {
+class RoundedButtons extends StatelessWidget {
 
-  LoginScreenButtons({this.mColor, this.mButtonLabel, this.onPressed});
+  RoundedButtons({this.mColor, this.mButtonLabel, this.onPressed});
 
   final MaterialAccentColor mColor;
   final String mButtonLabel;

@@ -1,4 +1,5 @@
-import 'package:flash_chat_firebase/custom_widgets/login_screen_button.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flash_chat_firebase/custom_widgets/rounded_button.dart';
 import 'package:flash_chat_firebase/view/login_screen.dart';
 import 'package:flash_chat_firebase/view/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -21,16 +22,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
     _mController =
         AnimationController(duration: Duration(seconds: 2), vsync: this);
-
     _mAnimation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
         .animate(_mController);
-
     _mController.forward();
-
     _mController.addListener(() {
-      setState(() {
-        print(_mAnimation.value);
-      });
+      setState(() {});
     });
   }
 
@@ -59,16 +55,17 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 SizedBox(
                   width: 20.0,
                 ),
-                DefaultTextStyle(
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      .copyWith(color: Colors.grey),
-                  child: Text(
-                    'Flash Chat',
-                    style: TextStyle(
-                      fontSize: 45.0,
-                      fontWeight: FontWeight.w900,
+                SizedBox(
+                  width: 250.0,
+                  child: DefaultTextStyle(
+                    style: const TextStyle(
+                        fontSize: 45.0,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.black38),
+                    child: AnimatedTextKit(
+                      animatedTexts: [
+                        TypewriterAnimatedText('Flash Chat'),
+                      ],
                     ),
                   ),
                 ),
@@ -80,7 +77,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             ),
 
             ///button sign in
-            LoginScreenButtons(
+            RoundedButtons(
                 mColor: Colors.lightBlueAccent,
                 mButtonLabel: 'Sign In',
                 onPressed: () {
@@ -88,7 +85,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 }),
 
             ///button sign up
-            LoginScreenButtons(
+            RoundedButtons(
                 mColor: Colors.blueAccent,
                 mButtonLabel: 'Register',
                 onPressed: () {

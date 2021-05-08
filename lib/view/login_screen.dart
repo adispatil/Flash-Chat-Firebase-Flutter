@@ -1,5 +1,5 @@
 import 'package:flash_chat_firebase/custom_widgets/back_button_widget.dart';
-import 'package:flash_chat_firebase/custom_widgets/login_screen_button.dart';
+import 'package:flash_chat_firebase/custom_widgets/rounded_button.dart';
 import 'package:flash_chat_firebase/view/chat_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
 
                   ///Login Button
-                  LoginScreenButtons(mColor: Colors.lightBlueAccent,
+                  RoundedButtons(mColor: Colors.lightBlueAccent,
                     mButtonLabel: 'Log In',
                     onPressed: () {
                       Navigator.pushNamed(context, ChatScreen.id);
